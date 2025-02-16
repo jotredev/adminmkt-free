@@ -6,10 +6,10 @@ import {NavProducts} from "@/components/ui-custom/navs/nav-products";
 import {CardTopSellingProducts} from "@/components/ui-custom/products/card-top-selling-products";
 import {Title} from "@/components/ui-custom/title";
 import {Button} from "@/components/ui/button";
+import {PromoteCard} from "@/components/ui-custom/cards/promote-card";
+import {TableProductPerformance} from "@/components/pages/products/table-product-performance";
 
 import {IoCloudUploadOutline, IoReload, IoAdd} from "react-icons/io5";
-import {TableProductPerformance} from "@/components/pages/products/table-product-performance";
-import {CardPromoteProducts} from "@/components/ui-custom/products/card-promote";
 
 export default function ProductsPage() {
   return (
@@ -47,7 +47,11 @@ export default function ProductsPage() {
         <div className="xl:col-span-1">
           <div className="space-y-5">
             <CardTopSellingProducts />
-            <CardPromoteProducts />
+            <PromoteCard
+              title="Promociona los productos más vendidos"
+              description="Incrementa tus ventas de los tenis Blanco con dorado lanzando una camapaña de marketing y dando ofertas inigualables"
+              textButton="Promocionar producto"
+            />
           </div>
         </div>
         <div className="xl:col-span-3">
