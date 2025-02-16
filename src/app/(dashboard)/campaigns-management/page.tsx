@@ -1,5 +1,7 @@
 import {CampaignsTable} from "@/components/pages/campaigns-management/campaigns-table";
 import {Cards} from "@/components/pages/campaigns-management/cards";
+import {ChartBudgetAllocation} from "@/components/pages/campaigns-management/chart-budget-allocation";
+import {PromoteCard} from "@/components/ui-custom/cards/promote-card";
 import {DatePickerWithPresets} from "@/components/ui-custom/date-picker";
 import {Title} from "@/components/ui-custom/title";
 import {Button} from "@/components/ui/button";
@@ -27,11 +29,18 @@ export default function CampaignsPage() {
         </div>
       </div>
       <Cards />
-      <div className="grid grid-cols-1 xl:grid-cols-6 gap-5">
-        <div className="xl:col-span-4">
+      <div className="grid grid-cols-1 xl:grid-cols-4 gap-5">
+        <div className="xl:col-span-3">
           <CampaignsTable />
         </div>
-        <div className="xl:col-span-2"></div>
+        <div className="xl:col-span-1 space-y-5">
+          <PromoteCard
+            title="Optimización de camapaña"
+            description="Tu camapaña esta generando 35% más de conversaciones que tu ADS Facebook."
+            textButton="Ver detalles"
+          />
+          <ChartBudgetAllocation />
+        </div>
       </div>
     </div>
   );

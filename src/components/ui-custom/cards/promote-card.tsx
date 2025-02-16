@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -8,36 +9,39 @@ import {
   CardHeader,
   CardTitle
 } from "@/components/ui/card";
-import Link from "next/link";
 import {
   IoChevronForwardCircleOutline,
   IoSparklesOutline
 } from "react-icons/io5";
 
-export function CardPromoteProducts() {
+interface PromoteCardProps {
+  title: string;
+  description: string;
+  textButton?: string;
+}
+
+export function PromoteCard({
+  title,
+  description,
+  textButton = "Promocionar"
+}: PromoteCardProps) {
   return (
     <Card className="bg-primary/10 dark:bg-background text-primary">
       <CardHeader className="grid grid-cols-6 gap-3">
-        <span className="col-span-1 flex items-center justify-center size-10 rounded-full border border-border">
+        <span className="col-span-1 flex items-center justify-center size-10 rounded-full border border-border bg-primary text-white">
           <IoSparklesOutline className="size-5" />
         </span>
-        <CardTitle className="col-span-5">
-          Promociona los productos más vendidos
-        </CardTitle>
+        <CardTitle className="col-span-5">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription>
-          Cree una campaña de marketing para aumentar las ventas y los indices
-          de conversión de sus productos. Lance campañas especificas y lance
-          ofertas por tiempo limitado.
-        </CardDescription>
+        <CardDescription>{description}</CardDescription>
       </CardContent>
       <CardFooter>
         <Link
           href="/"
           className="flex items-center justify-center w-full gap-2 bg-primary text-white h-14 px-3 rounded-full transition-all duration-300 hover:ring-2 hover:ring-primary ring-offset-2 ring-offset-background"
         >
-          <span>Nuevo producto</span>
+          <span>{textButton}</span>
           <IoChevronForwardCircleOutline className="size-5" />
         </Link>
       </CardFooter>
