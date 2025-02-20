@@ -3,6 +3,7 @@ import {Urbanist} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "@/providers/theme-provider";
 import NextTopLoader from "nextjs-toploader";
+import {Analytics} from "@vercel/analytics/react";
 
 const font = Urbanist({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body className={font.className}>
         <ThemeProvider
           attribute="class"
@@ -29,6 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Analytics />
           <NextTopLoader showSpinner={false} />
         </ThemeProvider>
       </body>
