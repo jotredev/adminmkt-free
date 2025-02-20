@@ -11,8 +11,9 @@ const font = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Campify",
-  description: "Campify open source"
+  title: "AdminMKT - FREE",
+  description:
+    "AdminMKT - Plantilla de administración para markeplace de código abierto."
 };
 
 export default function RootLayout({
