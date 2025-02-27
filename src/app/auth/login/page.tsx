@@ -5,10 +5,10 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function LoginPage() {
   return (
-    <div className="w-[600px] mx-auto bg-black rounded-3xl p-10 shadow-xl">
-      <div className="space-y-2 mb-8">
+    <div className="w-full lg:w-[600px] h-full lg:h-auto mx-auto bg-black rounded-3xl p-10 shadow-xl">
+      <div className="space-y-2 mb-8 pt-8">
         <h1 className="text-4xl text-white text-center font-bold">
-          Market<span className="text-primary">Sphere</span>
+          Admin<span className="text-primary">MKT</span>
         </h1>
         <h2 className="text-lg text-white text-center">Iniciar sesión</h2>
         <p className="text-muted-foreground text-center">
@@ -16,7 +16,7 @@ export default function LoginPage() {
           potenciales, campañas y ventas.
         </p>
       </div>
-      <div className="flex items-center gap-5 mb-10">
+      <div className="flex flex-col lg:flex-row lg:items-center gap-5 mb-10">
         <Button
           variant="outline"
           className="rounded-full w-full bg-[#1f1f1f] text-white border-[#1f1f1f]"
